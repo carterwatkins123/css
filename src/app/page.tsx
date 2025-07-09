@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
@@ -24,6 +27,30 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        {/* Basic Component Library Section */}
+        <section className="w-full max-w-md flex flex-col gap-6 p-6 border rounded-xl bg-background shadow-md">
+          <h2 className="text-xl font-bold mb-2">Component Library Demo</h2>
+          <form className="flex flex-col gap-4">
+            <label className="flex flex-col gap-1">
+              <span className="text-sm font-medium">Your Name</span>
+              <Input placeholder="Enter your name" />
+            </label>
+            <Button type="submit">Submit</Button>
+          </form>
+          <Card>
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+              <CardDescription>This is a card description using shadcn/ui.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>This is the card content. You can use this area to display information.</p>
+            </CardContent>
+            <CardFooter>
+              <Button variant="secondary">Secondary Action</Button>
+            </CardFooter>
+          </Card>
+        </section>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
