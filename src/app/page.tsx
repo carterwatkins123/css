@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className={"grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 " + inter.className}>
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-2xl mx-auto">
         {/* Buttons Section */}
         <section className="w-full flex flex-col gap-4 p-6 border rounded-xl bg-background shadow-md">
